@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" role="img" aria-label="Sunrise Hope Wellness">
+  <defs><linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e7b04a"/><stop offset="1" stop-color="#d9923a"/></linearGradient></defs>
+  <path d="M34.00 64.00 A26.00 26.00 0 0 1 86.00 64.00 Z" fill="url(#sun)"/>
+  <line x1="28.35" y1="53.72" x2="17.47" y2="50.18" stroke="#e7b04a" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="33.08" y1="44.44" x2="28.03" y2="40.77" stroke="#e7b04a" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="40.44" y1="37.08" x2="33.71" y2="27.82" stroke="#e7b04a" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="49.72" y1="32.35" x2="47.79" y2="26.41" stroke="#e7b04a" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="60.00" y1="30.72" x2="60.00" y2="19.28" stroke="#e7b04a" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="70.28" y1="32.35" x2="72.21" y2="26.41" stroke="#e7b04a" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="79.56" y1="37.08" x2="86.29" y2="27.82" stroke="#e7b04a" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="86.92" y1="44.44" x2="91.97" y2="40.77" stroke="#e7b04a" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="91.65" y1="53.72" x2="102.53" y2="50.18" stroke="#e7b04a" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="22.30" y1="65.69" x2="97.70" y2="65.69" stroke="#5d7a63" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="34.00" y1="74.01" x2="86.00" y2="74.01" stroke="#5d7a63" stroke-width="3.38" stroke-linecap="round"/>
+  <line x1="45.70" y1="82.33" x2="74.30" y2="82.33" stroke="#5d7a63" stroke-width="3.38" stroke-linecap="round"/>
+</svg>
