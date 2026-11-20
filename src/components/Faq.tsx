@@ -17,7 +17,11 @@ export default function Faq() {
               <span className="faq-q">{f.q}</span>
               <span className="faq-icon" aria-hidden="true" />
             </summary>
-            <p>{f.a}</p>
+            <div className="faq-answer">
+              {f.a.map((para) => (
+                <p key={para}>{para}</p>
+              ))}
+            </div>
           </details>
         ))}
       </div>

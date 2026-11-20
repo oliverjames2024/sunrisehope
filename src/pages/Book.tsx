@@ -3,9 +3,10 @@ import { Link, useSearchParams } from 'react-router'
 import heroBg from '../assets/images/session-room-lamp-warm.jpg'
 import { INQUIRY_EMAIL, services } from '../content'
 
-// FormSubmit forwards each submission to the inbox by email; no account or server needed.
-// The very first submission sends an activation email to INQUIRY_EMAIL that must be confirmed once.
-const ENDPOINT = `https://formsubmit.co/ajax/${INQUIRY_EMAIL}`
+// Web3Forms emails each submission to the inbox the access key was created for (sunrisehope33@gmail.com).
+// The key is public by design: it only says where to deliver, so it is safe in client code.
+const ENDPOINT = 'https://api.web3forms.com/submit'
+const ACCESS_KEY = '0e1cb4df-04fe-4b7d-9499-4be130db52f6'
 
 const SESSION_TYPES = ['In person', 'Distance'] as const
 
@@ -27,23 +28,24 @@ export default function Book() {
 
     setStatus('sending')
     try {
-      const res = await fetch(ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          Name: data.name,
-          Service: data.service,
-          ...(offersDistance && { 'Session type': data.sessionType }),
-          Phone: data.phone || '—',
-          Email: data.email,
-          Message: data.message || '—',
-          _replyto: data.email,
-          _subject: `Booking inquiry: ${data.service} from ${data.name}`,
-          _template: 'table',
-        }),
-      })
-      const json = await res.json().catch(() => ({}))
-      if (!res.ok || json.success === false || json.success === 'false') throw new Error()
+      // Sent as plain form data (not JSON) so the browser makes a simple request with no CORS preflight.
+      const fields: Record<string, string> = {
+        access_key: ACCESS_KEY,
+        subject: `Booking inquiry: ${data.service} from ${data.name}`,
+        from_name: 'Sunrise Hope Wellness website',
+        replyto: data.email,
+        Name: data.name,
+        Service: data.service,
+        ...(offersDistance && { 'Session type': data.sessionType }),
+        Phone: data.phone || '—',
+        Email: data.email,
+        Message: data.message || '—',
+      }
+      const body = new FormData()
+      for (const [k, v] of Object.entries(fields)) body.append(k, v)
+      const res = await fetch(ENDPOINT, { method: 'POST', body })
+      const json: { success?: boolean } = await res.json().catch(() => ({}))
+      if (!res.ok || !json.success) throw new Error()
       form.reset()
       setStatus('sent')
     } catch {

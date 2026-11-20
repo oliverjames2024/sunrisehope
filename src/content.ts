@@ -147,97 +147,205 @@ export const featuredQuotes = {
 } satisfies Record<string, Testimonial>
 
 // The first six answers are in Christina’s words, from her “How a Session Unfolds” post:
-// https://www.instagram.com/p/DbTh6OAGDD8/
-// The last two are drafted — Christina should review them.
-export const faqs: { q: string; a: string }[] = [
+// Christina's own FAQ (her "Frequently asked questions website page" note). Each string is a paragraph.
+export const faqs: { q: string; a: string[] }[] = [
   {
     q: 'What is energy care?',
-    a: 'Your body is your best medicine. Energy care is an intuitive blend of energy work, hands-on bodywork, somatic care, and messages from the other side — creating space for release, discovery, healing, and reconnection.',
+    a: [
+      'Energy care is attention paid to the parts of you that don’t show up on an X-ray. It works with the subtle layer underneath the muscle and bone, where stress, grief, and old patterns tend to settle in and stay a while.',
+      'It’s a way to bring more harmony to your physical body, to how you feel about yourself energetically, and to how you fit into this world. A session can include somatic work, messages from the other side that I’ll deliver to you, and sometimes acupressure as we hold space for the aches that are lingering in your body.',
+    ],
   },
   {
     q: 'Who leads the session?',
-    a: 'I don’t lead the session. I’m not in charge of what comes through — your higher self is. It always finds its way.',
-  },
-  {
-    q: 'Will I receive messages?',
-    a: 'It’s more than messages. The energy shifts as it comes through. It’s not only what’s spoken — it’s felt in the body, a somatic experience as much as a message.',
+    a: [
+      'You do. When you come in and settle onto the table, trust that your higher self will bring forward whatever you’re ready for, and whatever you’re growing out of.',
+      'I’m there the whole time to listen, hold space, and deliver what comes through, but the wisdom is yours.',
+    ],
   },
   {
     q: 'Do I need to come with a question?',
-    a: 'Come with a question, or none at all. An intention is welcome. So is arriving with nothing but curiosity.',
+    a: [
+      'You’re welcome to come in with an intention or a question, and to trust that your higher self will guide the session where it needs to go. If you don’t have anything specific in mind, that’s okay too. The nudge that brought you in is enough.',
+    ],
   },
   {
     q: 'What may come up during a session?',
-    a: 'Whatever the body and spirit are ready for — the body itself, other timelines, ancestral work, those who’ve crossed over.',
-  },
-  {
-    q: 'Am I doing this alone?',
-    a: 'You have a spiritual team walking with you. Our souls are connected to something greater than this one life — to Divine source, and to the guides who’ve walked before us, here to help us along the way.',
+    a: [
+      'This is where things get creative, beautiful, and unique to each client. It all depends on what your spirit needs. Messages may come from the guides I work with, who are always present with us and protecting us. They can also come from your own guides, your loved ones and ancestors on the other side, and other timelines. All of it is welcomed into the space with safety and protection.',
+      'That’s why I include therapeutic work like somatic practices and acupressure. It keeps your body grounded so you can safely feel through whatever needs to come up.',
+    ],
   },
   {
     q: 'Do you offer remote sessions?',
-    a: 'Yes — remote sessions are available, so you can receive care from wherever you are.',
+    a: [
+      'I do! On the day of your session, I’ll ask you to send a photo of your face so I can connect with you. I clear a quiet space just as I would if you were on my table, and I ask you to set aside that time to rest or journal. Please keep your phone nearby. We’ll talk on and off throughout the session as I’m guided to call, and we’ll wrap up together at the end so you can ask any questions.',
+      'Remote sessions can be very powerful because you’re in your own space. Some clients find it comforting to be at home while moving through something difficult and tender. Whether you’re on my table or in the privacy of your own space, energy care meets us where we are.',
+    ],
   },
   {
     q: 'Which service should I book?',
-    a: 'Energy Care is the deepest dive into energy work and intuitive guidance. Massage with Energy Care blends the two. Massage is a restorative session focused on the physical body. If you’re unsure, reach out and we’ll find the right fit together.',
-  },
-]
-
-// SAMPLE — the Self-Education Library. Replace with Christina's own picks.
-export type LibraryItem = { title: string; by?: string; note?: string; url?: string }
-export type LibrarySection = { id: string; title: string; intro: string; items: LibraryItem[] }
-
-export const library: LibrarySection[] = [
-  {
-    id: 'books',
-    title: 'Books on Energy Work',
-    intro: 'Foundational reads for understanding the body’s energy and the unseen.',
-    items: [
-      { title: 'Hands of Light', by: 'Barbara Ann Brennan' },
-      { title: 'Energy Medicine', by: 'Donna Eden' },
-      { title: 'Wheels of Life', by: 'Anodea Judith' },
-      { title: 'Anatomy of the Spirit', by: 'Caroline Myss' },
-      { title: 'The Body Keeps the Score', by: 'Bessel van der Kolk' },
-    ],
-  },
-  {
-    id: 'writing',
-    title: 'From the Blog',
-    intro: 'Reflections from A Student of the Veil, Christina’s Substack.',
-    items: [
-      { title: 'A Student of the Veil', note: 'Ancient wisdom. Thin veils. I still lose my keys.', url: social.substack.url },
-      { title: 'We are not walking through life alone', note: 'On guides, timelines, and asking for help.' },
-      { title: 'When you feel stuck, do something different', note: 'Small shifts that move stuck energy.' },
-    ],
-  },
-  {
-    id: 'recipes',
-    title: 'Nourishing Recipes',
-    intro: 'Simple, grounding food for before and after a session.',
-    items: [
-      { title: 'Golden milk', note: 'Turmeric, ginger, and warm spice to wind down.' },
-      { title: 'Root vegetable broth', note: 'A warm, grounding bowl for the days after deep work.' },
-      { title: 'Dandelion & nettle tea', note: 'A gentle herbal infusion.' },
-    ],
-  },
-  {
-    id: 'practices',
-    title: 'Practices to Try at Home',
-    intro: 'Small rituals to keep the space you create in session open.',
-    items: [
-      { title: 'Grounding breath', note: 'Five minutes of slow breathing with your feet on the earth.' },
-      { title: 'Body scan', note: 'Listening to the body from head to toe, without fixing anything.' },
-      { title: 'Journaling prompts', note: 'What is ready to be seen and heard today?' },
-    ],
-  },
-  {
-    id: 'follow',
-    title: 'Voices Worth Following',
-    intro: 'Teachers, writers, and podcasts that inspire the work.',
-    items: [
-      { title: 'David Whyte', note: 'Poet and philosopher of belonging.' },
-      { title: 'Sunrise Hope Wellness on Instagram', note: social.instagram.handle, url: social.instagram.url },
+    a: [
+      'Bodywork is an essential part of keeping the body and mind balanced. Start with whatever feels most comfortable to you. For some, that’s a massage. Others feel called to Massage and Messages, or straight to a channeling session. Your work with me can grow into other types of sessions over time, or stay right where it is. Both are perfect.',
     ],
   },
 ]
+
+
+// The Self-Education Library, written by Christina.
+// In any library text, *words* render in italics (book titles, emphasis).
+
+export const librarySections = [
+  { id: 'practices', title: 'Practices to Try at Home' },
+  { id: 'voices', title: 'Voices Worth Following' },
+  { id: 'bookshelf', title: 'The Bookshelf' },
+] as const
+
+export type Practice = { title: string; body: string; listLabel: string; list: string[]; after?: string }
+
+export const practices = {
+  intro: 'Simple ways to carry the work home and stay grounded between sessions.',
+  items: [
+    {
+      title: 'Journaling After a Session',
+      body: 'Some of the most important parts of a session show up later: in the car, in the shower, or as you’re falling asleep that night. Keep a journal nearby for the next day or two and write down whatever comes through, even if it doesn’t make sense yet. That might be messages, images, memories, dreams, or sensations in your body. You don’t need to write well or interpret anything. Just catch it, because these pieces often connect later in ways that surprise you.',
+      listLabel: 'A few prompts to start',
+      list: [
+        'What did I feel in my body during or after the session?',
+        'What words, images, or memories keep coming back?',
+        'What feels lighter? What still feels tender?',
+        'If my body could speak right now, what would it say?',
+      ],
+    },
+    {
+      title: 'Keep an Oracle Deck at Hand',
+      body: 'When you feel scattered, unsure, or pulled in too many directions, an oracle deck can bring you back to center. Keep one somewhere easy to reach, like your nightstand, desk, or car. Take a breath, hold the deck for a moment, and pull a single card. You don’t need to ask a perfect question. Just let the card be a gentle anchor: a word or image to carry with you for the day, and a reminder that guidance is always closer than it feels.',
+      listLabel: 'A simple way to begin',
+      list: [
+        'Shuffle slowly and breathe while you do.',
+        'Ask, “What do I need to know right now?”',
+        'Pull one card and sit with it before reading the guidebook.',
+        'Notice what you feel first. That’s often the real message.',
+      ],
+      after: 'The deck I reach for again and again is *Work Your Light* by Rebecca Campbell, with artwork by Danielle Noel. The paintings alone feel like medicine.',
+    },
+    {
+      title: 'The Evening Check-In',
+      body: 'Your days shape your energy as much as any session does. Try to organize your day as best you can. Then, at the end of it, pause and notice how you feel. If you feel scattered, drained, or out of balance, don’t judge it. Get curious. Ask yourself what you could switch up tomorrow to feel more grounded, even if it’s one small thing.',
+      listLabel: 'Ask yourself',
+      list: [
+        'What overstimulated me today?',
+        'What can I *add* tomorrow? A grounding food, a walk outside, a few quiet minutes, or time with my oracle deck.',
+        'What can I *take away*? Less screen time, fewer conversations, or one less thing on my list.',
+        'What would make tomorrow feel a little softer?',
+      ],
+      after: 'Small changes add up. Over time, you’ll learn what your body and energy need to feel steady.',
+    },
+  ] satisfies Practice[],
+}
+
+export type Voice = { name: string; instagram: string; site: string; about: string }
+
+export const voices = {
+  intro: 'Teachers and writers I truly resonate with, and trust to carry the work forward between sessions.',
+  items: [
+    {
+      name: 'Dr. Zach Bush',
+      instagram: 'zachbushmd',
+      site: 'zachbushmd.com',
+      about: 'A physician whose work ties the health of our bodies to the health of the soil. He trained in internal medicine, endocrinology, and hospice care, and he founded the nonprofit Farmer’s Footprint. I come back to him for the bigger picture of how our food, the earth, and our own healing are all connected.',
+    },
+    {
+      name: 'Jillian Turecki',
+      instagram: 'jillianturecki',
+      site: 'jillianturecki.com',
+      about: 'A certified relationship coach and teacher who has spent 20 years helping people build fulfilling relationships. Her podcast *Jillian on Love* and her book *It Begins With You: The 9 Hard Truths About Love That Will Change Your Life* are clear and kind, and they’re honest about how love starts with how we treat ourselves.',
+    },
+    {
+      name: 'Sheleana Aiyana',
+      instagram: 'risingwoman',
+      site: 'risingwoman.com',
+      about: 'The founder of Rising Woman, a community of more than 3 million readers. Her approach draws on somatic healing, family systems, and inherited family trauma, and it treats relationship as a spiritual path. Her book *Becoming the One* is the one I’d hand someone who’s ready to heal old patterns and come home to themselves.',
+    },
+  ] satisfies Voice[],
+}
+
+// Covers live in src/assets/covers/<cover>.jpg. A book without one gets a lettered cover.
+export type Book = { title: string; author: string; cover?: string; note?: string; fiction?: boolean }
+export type Shelf = { id: string; title: string; intro: string; books: Book[] }
+
+export const bookshelf = {
+  title: 'Spirituality is a way of *living.*',
+  intro: 'Books for the whole of it: the heart, the body, the soul, and the kitchen.',
+  closing: 'Have a book that changed you? Send it my way. This shelf is always growing.',
+  shelves: [
+    {
+      id: 'grief',
+      title: 'Grief & Loss',
+      intro: 'Company for the hardest seasons, and for what comes after.',
+      books: [
+        { title: 'The Wild Edge of Sorrow', author: 'Francis Weller', cover: 'wild-edge-of-sorrow', note: 'My favorite book on grief.' },
+        { title: 'It’s OK That You’re Not OK', author: 'Megan Devine', cover: 'its-ok-that-youre-not-ok' },
+        { title: 'Bearing the Unbearable', author: 'Joanne Cacciatore' },
+        { title: 'When Things Fall Apart', author: 'Pema Chödrön', cover: 'when-things-fall-apart' },
+        { title: 'The Year of Magical Thinking', author: 'Joan Didion', cover: 'year-of-magical-thinking' },
+      ],
+    },
+    {
+      id: 'mind-body',
+      title: 'Mind, Body & Healing',
+      intro: 'How stress, emotion, and trauma live in the body, and how it heals.',
+      books: [
+        { title: 'What My Bones Know', author: 'Stephanie Foo', cover: 'what-my-bones-know' },
+        { title: 'The Fear Cure', author: 'Lissa Rankin', cover: 'the-fear-cure' },
+        { title: 'The Last Best Cure', author: 'Donna Jackson Nakazawa' },
+        { title: 'When the Body Says No', author: 'Gabor Maté', cover: 'when-the-body-says-no' },
+        { title: 'Becoming Supernatural', author: 'Joe Dispenza', cover: 'becoming-supernatural' },
+        { title: 'The Emotion Code', author: 'Dr. Bradley Nelson', cover: 'the-emotion-code' },
+        { title: 'The Secret Language of Your Body', author: 'Inna Segal', cover: 'secret-language-of-your-body' },
+      ],
+    },
+    {
+      id: 'spirituality',
+      title: 'Everyday Spirituality',
+      intro: 'Living awake to the sacred in ordinary days.',
+      books: [
+        { title: 'Anam Cara', author: 'John O’Donohue', cover: 'anam-cara', note: 'One of my absolute favorites.' },
+        { title: 'Many Lives, Many Masters', author: 'Brian Weiss', cover: 'many-lives-many-masters' },
+        { title: 'Shamanic Power Animals', author: 'don Jose Ruiz', cover: 'shamanic-power-animals' },
+        { title: 'Braiding Sweetgrass', author: 'Robin Wall Kimmerer', cover: 'braiding-sweetgrass' },
+      ],
+    },
+    {
+      id: 'kitchen',
+      title: 'The Kitchen Apothecary',
+      intro: 'Tonics, herbs, and nourishing food from your own kitchen.',
+      books: [
+        { title: 'Tonic', author: 'Tanita de Ruijt', cover: 'tonic' },
+        { title: 'Nourishing Traditions', author: 'Sally Fallon', cover: 'nourishing-traditions' },
+        { title: 'The Anti-Inflammatory Kitchen Cookbook', author: 'Leslie Langevin', cover: 'anti-inflammatory-kitchen-cookbook' },
+        { title: 'The Green Witch’s Garden', author: 'Arin Murphy-Hiscock', cover: 'green-witchs-garden' },
+        { title: 'DIY Bitters', author: 'Jovial King & Guido Masé', cover: 'diy-bitters' },
+        { title: 'The Lost Book of Herbal Remedies', author: 'Claude Davis & Dr. Nicole Apelian', cover: 'lost-book-of-herbal-remedies' },
+      ],
+    },
+    {
+      id: 'inner-witch',
+      title: 'Waking the Inner Witch',
+      intro: '“I don’t cast spells. I believe our words, our prayers, and our intentions already are.”',
+      books: [
+        { title: 'Heal the Witch Wound', author: 'Celeste Larsen', cover: 'heal-the-witch-wound' },
+        { title: 'The Green Witch', author: 'Arin Murphy-Hiscock', cover: 'the-green-witch' },
+        { title: 'The Wellness Witch', author: 'Nikki Van De Car', cover: 'the-wellness-witch' },
+        { title: 'Women Who Run with the Wolves', author: 'Clarissa Pinkola Estés', cover: 'women-who-run-with-the-wolves' },
+        { title: 'The Dance of the Dissident Daughter', author: 'Sue Monk Kidd', cover: 'dance-of-the-dissident-daughter' },
+        { title: 'Brida', author: 'Paulo Coelho', cover: 'brida', fiction: true },
+        { title: 'The Witch of Portobello', author: 'Paulo Coelho', cover: 'witch-of-portobello', fiction: true },
+      ],
+    },
+  ] satisfies Shelf[],
+}
+
+/** Where a book title links: a Bookshop.org search, which supports independent bookstores. */
+export const bookLink = (b: Book) =>
+  `https://bookshop.org/search?keywords=${encodeURIComponent(`${b.title} ${b.author.split(' & ')[0]}`)}`
